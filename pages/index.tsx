@@ -1,5 +1,34 @@
 import Head from "next/head";
 
+import { Misc, miscs, Tool, tools } from "../db/tools";
+
+type List = Tool[] | Misc[];
+
+const List = ({ list, title }: { list: List; title: string }) => {
+  return (
+    <div className="border-b-4 mt-8 px-1 border-b-blue-700 w-full  max-w-xl">
+      <h2 className="text-4xl">{title}</h2>
+      {list.map((t) => (
+        <div className="border-2 flex flex-col    m-2 p-1" key={t.uri}>
+          <div className="flex justify-between">
+            <a className="underline" href={t.uri}>
+              {t.name}
+            </a>{" "}
+            <div className="flex space-x-1">
+              {t.tags?.map((ta) => (
+                <div className="text-sm font-medium" key={ta}>
+                  {ta}{" "}
+                </div>
+              ))}
+            </div>
+          </div>
+          {t.description ? <p className="text-sm">{t.description}</p> : null}
+        </div>
+      ))}
+    </div>
+  );
+};
+
 export default function Home() {
   return (
     <>
@@ -13,7 +42,11 @@ export default function Home() {
       <div className="flex flex-col bg-cyan-400 min-h-screen items-center  ">
         <h1 className="font-bold text-3xl">📜 Alexandria . . .</h1>
 
-        <div className="animate-bounce  text-2xl m-4 font-light">Content</div>
+        <div className="animate-bounce  text-2xl mt-4 font-light">Content</div>
+
+        {tools ? <List title={"Tools"} list={tools} /> : null}
+
+        {miscs ? <List title={"Misc"} list={miscs} /> : null}
       </div>
     </>
   );
