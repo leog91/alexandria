@@ -9,7 +9,10 @@ const List = ({ list, title }: { list: List; title: string }) => {
     <div className="border-b-4 mt-8 px-1 border-b-blue-700 w-full  max-w-xl">
       <h2 className="text-4xl">{title}</h2>
       {list.map((t) => (
-        <div className="border-2 flex flex-col    m-2 p-1" key={t.uri}>
+        <div
+          className="border-2  hover:border-blue-600 flex flex-col    m-2 p-1"
+          key={t.uri}
+        >
           <div className="flex justify-between">
             <a className="underline" href={t.uri}>
               {t.name}
