@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export default function Desktop() {
   const taskBarDivider = (
     <div className=" border-2  mx-1 bg-stone-200 h-5  border-stone-600 shadow-black shadow-sm w-1.5"></div>
@@ -26,7 +28,7 @@ export default function Desktop() {
   );
 
   return (
-    <div className="flex  overflow-hidden  select-none flex-col justify-between bg-gray-500 min-h-screen items-center  ">
+    <div className="flex relative overflow-hidden  select-none flex-col justify-between bg-gray-500 min-h-screen items-center  ">
       <div
         // style={{
         //   height: "calc(100vh - 28px)",
@@ -38,6 +40,21 @@ export default function Desktop() {
         {desktopApp("Recycle Bin", "🗑️")}
         {desktopApp("CD-Drive", "💽")}
         {desktopApp("3½ Floppy", "💾")}
+        <div className="w-16 hover:cursor-pointer h-20 flex flex-col items-center">
+          <picture>
+            <img src="/win95-icons/tree-0.png" className="w-10" alt="icon" />
+          </picture>
+          <div className="bg-blue-800 text-center text-white text-sm -py-0.5 font-thin ">
+            Apps
+          </div>
+        </div>
+        <picture>
+          <img
+            className="absolute left-1/2 top-1/3"
+            src="/win95-icons/computer_explorer-2.png"
+            alt="icon"
+          />
+        </picture>
       </div>
       <div className=" flex p-0.5  text-xs bg-stone-300 w-full items-center">
         <div className=" border-2  px-1 text-sm font-bold  border-stone-600 shadow-black shadow-sm">
