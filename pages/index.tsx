@@ -17,10 +17,13 @@ const List = ({ list, title }: { list: List; title: string }) => {
             <a className="underline" href={t.uri}>
               {t.name}
             </a>{" "}
-            <div className="flex space-x-1">
+            <div className="flex items-center  space-x-1">
               {t.tags?.map((ta) => (
-                <div className="text-sm font-medium" key={ta}>
-                  {ta}{" "}
+                <div
+                  className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 h-5 rounded  dark:bg-blue-900 dark:text-blue-300"
+                  key={ta}
+                >
+                  {ta}
                 </div>
               ))}
             </div>
