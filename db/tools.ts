@@ -23,7 +23,9 @@ export const tools: Tool[] = [
     { name: "Penpot", uri: "https://design.penpot.app/", description: "Design and prototyping platform", tags: ["UI"] },
     { name: "tabler-icons", uri: "https://tabler-icons.io/", description: "Over 3100 pixel-perfect icons for web design", tags: ["UI"] },
     { name: "Flowbite", uri: "https://flowbite.com/", tags: ["UI"], description: "components on top of Tailwind CSS" },
-    { name: "win98icons", uri: "https://win98icons.alexmeub.com/", tags: ["UI"] }
+    { name: "win98icons", uri: "https://win98icons.alexmeub.com/", tags: ["UI"] },
+    { name: "animista", uri: "https://animista.net/play/attention/wobble/wobble-hor-bottom", description: "css animations", tags: ["UI"] }
+
 
 
 
