@@ -10,6 +10,8 @@ export type Misc = { uri: string, name: string, tags?: MiscTag[], description?: 
 
 export type Tool = { uri: string, name: string, tags?: ToolTag[], description?: string }
 
+export type Post = { label: string, url: string }
+
 
 
 export const tools: Tool[] = [
@@ -34,4 +36,26 @@ export const tools: Tool[] = [
 
 export const miscs: Misc[] = [
     { name: "adventofcode", uri: "https://adventofcode.com/2022/events", tags: ["lvlUp"] }
+]
+
+
+export const posts = [
+    { label: "hackaday", url: "https://hackaday.com/category/handhelds-hacks/" },
+    { label: "Theremin-like Pico H musical instrument", url: "https://www.raspberrypi.com/news/theremin-like-pico-h-musical-instrument" },
+    {
+        label: "Making a DIY Raspberry Pi camera mount with privacy mode!", url: "https://www.cnx-software.com/2023/01/15/making-a-diy-raspberry-pi-camera-mount-with-privacy-mode/"
+    },
+
+    {
+        label: "Weather station powered by Raspberry Pi Pico", url: "https://www.geeky-gadgets.com/weather-station-09-02-2023/"
+    },
+
+    {
+        label: "LED Filament Lamp", url: "https://www.instructables.com/LED-Filament-Lamp/"
+    },
+
+
+
+
+
 ]

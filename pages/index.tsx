@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { Misc, miscs, Tool, tools } from "../db/tools";
+import { Misc, miscs, posts, Tool, tools } from "../db/tools";
 
 type List = Tool[] | Misc[];
 
@@ -53,6 +53,19 @@ export default function Home() {
         {tools ? <List title={"Tools"} list={tools} /> : null}
 
         {miscs ? <List title={"Misc"} list={miscs} /> : null}
+
+        {posts ? (
+          <div className="mt-5">
+            TODO {"==> "}
+            {posts.map((p) => (
+              <div key={p.url}>
+                <a className="underline" href={p.url}>
+                  {p.label}
+                </a>{" "}
+              </div>
+            ))}
+          </div>
+        ) : null}
       </div>
     </>
   );
