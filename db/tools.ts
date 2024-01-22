@@ -26,7 +26,27 @@ export const tools: Tool[] = [
     { name: "tabler-icons", uri: "https://tabler-icons.io/", description: "Over 3100 pixel-perfect icons for web design", tags: ["UI"] },
     { name: "Flowbite", uri: "https://flowbite.com/", tags: ["UI"], description: "components on top of Tailwind CSS" },
     { name: "win98icons", uri: "https://win98icons.alexmeub.com/", tags: ["UI"] },
-    { name: "animista", uri: "https://animista.net/play/attention/wobble/wobble-hor-bottom", description: "css animations", tags: ["UI"] }
+    { name: "animista", uri: "https://animista.net/play/attention/wobble/wobble-hor-bottom", description: "css animations", tags: ["UI"] },
+    {
+        name: "Duck DNS", uri: "https://www.duckdns.org/", description: "free dynamic DNS hosted on AWS", tags: []
+    },
+    {
+        name: "no-ip", uri: "https://www.noip.com/", description: "Dynamic IP address got you down?", tags: []
+    },
+    {
+        name: "watermark remover", uri: "https://www.watermarkremover.io/", description: "Online Watermark Remover For FREE", tags: []
+    }
+    ,
+    {
+        name: "shadcn", uri: "https://ui.shadcn.com/", description: "Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.", tags: ["UI"]
+    }
+    , {
+        name: "lucide", uri: "https://lucide.dev/", description: "Beautiful & consistent iconsMade by the community", tags: ["UI"]
+    }
+
+    , {
+        name: "dataflare", uri: "https://dataflare.app/", description: "Easily manage your Table, view Data, write SQL and run Query.", tags: ["db"]
+    }
 
 
 
@@ -35,7 +55,9 @@ export const tools: Tool[] = [
 
 
 export const miscs: Misc[] = [
-    { name: "adventofcode", uri: "https://adventofcode.com/2022/events", tags: ["lvlUp"] }
+    { name: "adventofcode", uri: "https://adventofcode.com/2022/events", tags: ["lvlUp"] },
+    { name: "typehero => learn TS", uri: "https://typehero.dev/explore", tags: ["lvlUp"] }
+
 ]
 
 
