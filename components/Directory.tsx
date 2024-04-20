@@ -1,6 +1,10 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 
-function Directory() {
+function Directory({
+  closeWindow,
+}: {
+  closeWindow?: Dispatch<SetStateAction<boolean>>;
+}) {
   const sideMenu = [
     {
       title: "File and Folder Task",
@@ -31,7 +35,19 @@ function Directory() {
 
   return (
     <div className="bg-neutral-200 flex flex-col text-sm">
-      <div className="bg-sky-900 text-white font-bold">📂Games</div>
+      <div className="bg-sky-900 flex justify-between items-center text-white font-bold">
+        <div>📂Games</div>
+        <button
+          className="m-1 text-center rounded-sm align-middle bg-red-500 h-4 w-4"
+          onClick={() => {
+            if (closeWindow) {
+              closeWindow(false);
+            }
+          }}
+        >
+          X
+        </button>
+      </div>
       <div className="flex  space-x-1 ">
         <div>File</div>
         <div>Edit</div>
